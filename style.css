@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,700;1,700&family=Poppins:ital,wght@0,100;0,200;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,700;1,800;1,900&family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: rgb(125, 83, 78);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.container{
+    background-color: black;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    color: white;
+    display: grid;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+.container p{
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.container input{
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.container button{
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin: 20px 0;
+    background-color: salmon;
+    color: white;
+}
+
+.container button:hover{
+    background-color: rgb(125, 83, 78);
+    border: 2px solid #fff;
+}
+
+#imgBox{
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s;
+}
+
+#imgBox img{
+    width: 100%;
+    padding: 10px;
+}
+
+#imgBox.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
+
+.error{
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
